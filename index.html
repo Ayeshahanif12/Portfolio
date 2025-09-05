@@ -27,71 +27,127 @@
   <!-- Navbar -->
   <nav>
     <div class="container">
-      <h1>My Portfolio</h1>
-      <span class="menu-toggle">☰</span>
+      <h1>portfolio</h1>
       <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero">home</a></li>
+        <li><a href="#head">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact-info">contact</a></li>
       </ul>
+      <button id="theme-toggle">
+        <i class="fa-solid fa-sun"></i>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <div>
-      <h1 id="header">Hi, I'm Ayesha 👋</h1>
-      <p id="intro">Frontend Developer | JavaScript Enthusiast | React Learner</p>
+  <!-- Hero Section -->
+  <header>
+    <div class="hero" id="hero">
+      <div class="circle-animated" data-aos="zoom-in">
+        <img src="my .jpg" alt="My Photo">
+      </div>
+      <div class="hero-text" data-aos="fade-left">
+        <h1 id="header">Web-Developer</h1>
+        <p id="intro">
+          I specialize in crafting responsive, modern, and scalable websites with clean,
+          efficient code and innovative design, creating seamless digital experiences that
+          are not only visually stunning but also optimized for performance and growth.
+        </p>
+        <div class="btnContainer">
+          <a href="https://docs.google.com/document/d/1YZkK60zQ84czJ5-Ani1Vte6yne8CueIK/view" target="_blank">
+            <button id="view" data-aos="zoom-in" data-aos-delay="300">View Resume</button>
+          </a>
+          <a href="https://docs.google.com/document/d/1YZkK60zQ84czJ5-Ani1Vte6yne8CueIK/export?format=pdf" download>
+            <button id="download" data-aos="zoom-in" data-aos-delay="500">Download</button>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="circle-animated"></div>
-  </section>
+  </header>
+
+  <!-- Skills -->
+  <h2 id="head" data-aos="fade-up">My Skills</h2>
+  <div class="skills" id="skills" data-aos="zoom-in-up">
+    <div class="inner">
+      <div class="skill"><i class="fi fi-brands-js"></i><span>Javascript</span></div>
+      <div class="skill"><i class="fi fi-brands-html5"></i><span>HTML</span></div>
+      <div class="skill"><i class="fi fi-brands-css3"></i><span>CSS</span></div>
+      <div class="skill"><i class="fi fi-brands-bootstrap"></i><span>Bootstrap</span></div>
+      <div class="skill"><i class="fi fi-brands-php"></i><span>PHP</span></div>
+      <div class="skill"><i class="fi fi-brands-mysql"></i><span>MySQL</span></div>
+      <div class="skill"><i class="fi fi-rr-database"></i><span>Database</span></div>
+    </div>
+  </div>
 
   <!-- Projects -->
-  <section id="projects" class="projects">
-    <h2>My Projects</h2>
+  <div class="projects" id="projects">
+    <h2 data-aos="fade-up">My Projects</h2>
     <div class="projects-grid">
-      <div class="book">
-        <div class="project-content">
-          <img src="https://via.placeholder.com/320x420" alt="Project 1">
+      <div class="book" data-aos="flip-left">
+        <div class="cover">E-Commerce</div>
+        <div class="page">
+          <div class="project-content">
+            <img src="ecommerce-website.png" alt="E-Commerce Website">
+            <h3>E-Commerce Website</h3>
+            <p>Built with HTML, CSS, JS, PHP, MySQL — featuring cart, checkout, and database-driven product
+              management.</p>
+            <a href="#">View Project</a>
+          </div>
         </div>
       </div>
-      <div class="book">
-        <div class="project-content">
-          <img src="https://via.placeholder.com/320x420" alt="Project 2">
+
+      <div class="book" data-aos="flip-right">
+        <div class="cover">Calculator</div>
+        <div class="page">
+          <div class="project-content">
+            <img style="height: 117px;" src="calculator.png" alt="calculator">
+            <h3>Calculator</h3>
+            <p>A responsive JavaScript calculator with a simple and modern design.</p>
+            <a href="https://ayeshahanif12.github.io/calculator/">View Project</a>
+          </div>
         </div>
       </div>
-      <div class="book">
-        <div class="project-content">
-          <img src="https://via.placeholder.com/320x420" alt="Project 3">
+
+      <div class="book" data-aos="flip-left">
+        <div class="cover">Cafe Finder</div>
+        <div class="page">
+          <div class="project-content">
+            <img height="90px" src="cafe-finder.png" alt="cafe-finder">
+            <h3>Cafe Finder</h3>
+            <p>A cafe discovery app built with Geoapify & Unsplash API, featuring live location search, image integration, and save-for-later functionality.</p>
+            <a href="https://ayeshahanif12.github.io/cafefinder/">View Project</a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Contact -->
-  <section id="contact" class="contact-info">
-    <div class="contact-form">
-      <h2>Contact Me</h2>
-      <input type="text" placeholder="Your Name"/>
-      <input type="email" placeholder="Your Email"/>
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button>Send</button>
-    </div>
+  <h2 data-aos="fade-up">Contact Me</h2>
+  <div class="contact-info" id="contact-info" data-aos="fade-up">
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
     <div class="contact-links">
-      <h2>Find Me</h2>
-      <a href="#">📧 Email</a>
-      <a href="#">💼 LinkedIn</a>
-      <a href="#">🐙 GitHub</a>
+      <a href="https://github.com/" target="_blank"><i class="fi fi-brands-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/ayesha-hanif-bbb91824a" target="_blank"><i
+          class="fi fi-brands-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/webisticz?igsh=amltdzE2YmlsaWds" target="_blank"><i
+          class="fi fi-brands-instagram"></i> Instagram</a>
     </div>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Ayesha Hanif. All Rights Reserved.</p>
+    <p>&copy; 2023 AYESHA HANIF. All rights reserved.</p>
     <div class="social-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"/>
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"/>
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"/>
+      <img src="instagram.png" alt="Instagram">
+      <img src="linkedin.png" alt="LinkedIn">
+      <img src="facebook.png" alt="Facebook">
+      <img src="github.png" alt="GitHub">
     </div>
   </footer>
 
