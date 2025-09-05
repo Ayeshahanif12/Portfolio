@@ -57,14 +57,6 @@ nav h1 {
 }
 
 
-
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 nav ul li {
   margin: 0 15px;
 }
@@ -97,6 +89,57 @@ nav ul li a:hover {
   transform: rotate(180deg) scale(1.1);
   background: rgba(255, 255, 255, 0.1);
 }
+
+/* Default Navbar */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide hamburger in desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ===== Responsive Navbar ===== */
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: none; /* hide menu */
+    flex-direction: column;
+    background: rgba(2, 6, 23, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav ul.active {
+    display: flex; /* show when active */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  #theme-toggle {
+    margin-left: 10px;
+  }
+}
+
 
 body.light-mode #theme-toggle {
   border: 2px solid #0f172a;

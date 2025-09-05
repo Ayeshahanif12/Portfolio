@@ -1,4 +1,4 @@
-// Theme Toggle
+// Theme Toggle (already in your code)
 const btn = document.getElementById("theme-toggle");
 const body = document.body;
 const icon = btn.querySelector("i");
@@ -14,6 +14,25 @@ btn.addEventListener("click", () => {
     icon.classList.add("fa-sun");
   }
 });
+
+// Hamburger Menu Toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+
+  // Toggle hamburger icon (bars <-> x)
+  const icon = hamburger.querySelector("i");
+  if (navLinks.classList.contains("active")) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+  } else {
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+  }
+});
+
 
 // Page Load Animation
 window.addEventListener("load", () => {
